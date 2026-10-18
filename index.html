@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumo — Éclairez vos dépenses récurrentes</title>
+  <meta name="description" content="Lumo vous aide à centraliser, optimiser et maîtriser vos abonnements récurrents avec alertes proactives et assistant financier.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo-brand">
+        <div class="logo-badge">⚡</div>
+        <span>Lumo</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Fonctionnalités</a>
+        <a href="#tech">Architecture</a>
+        <a href="privacy.html">Confidentialité</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Hero -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-pill">
+          <span>✨ Distribution officielle Android</span>
+        </div>
+        <h1>
+          Éclairez et maîtrisez vos <br>
+          <span class="gradient-text">abonnements récurrents</span>
+        </h1>
+        <p class="hero-desc">
+          Fini les prélèvements surprises et les abonnements oubliés. Lumo vous offre une visibilité totale sur vos dépenses mensuelles et annuelles avec alertes de renouvellement et conseils personnalisés.
+        </p>
+
+        <div class="cta-group">
+          <!-- Bouton en attente tant que la fiche Uptodown n'est pas encore créée -->
+          <a href="#download" class="btn-primary btn-pending" id="downloadBtn">
+            <span>⏳ Bientôt disponible sur Uptodown</span>
+          </a>
+          <span class="cta-note">
+            <span class="badge-uptodown">APK Signé</span> Fiche en cours de préparation pour Uptodown
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalités clés -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tout pour garder le contrôle</h2>
+          <p>Une expérience fluide, sombre et conçue pour votre sérénité financière.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>Tableau de bord intelligent</h3>
+            <p>Visualisez instantanément vos totaux réels mensuels et annuels, avec suivi de budget et répartition par catégorie (Streaming, Musique, Cloud, etc.).</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🔔</div>
+            <h3>Alertes anti-prélèvement</h3>
+            <p>Recevez des notifications précises avant chaque reconduction automatique et une alerte critique 24 heures avant l'expiration de vos périodes d'essai gratuit.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🤖</div>
+            <h3>Assistant IA & Scanner Facture</h3>
+            <p>Analysez vos reçus d'abonnement en un clin d'œil grâce à la reconnaissance optique (OCR) et posez vos questions d'optimisation à l'assistant IA intégré.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🔒</div>
+            <h3>Sécurité & Verrouillage PIN</h3>
+            <p>Protégez vos données financières avec un code PIN personnalisé à 4 chiffres ou le déverrouillage biométrique (empreinte / visage).</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📁</div>
+            <h3>Sauvegarde & Restauration</h3>
+            <p>Exportez l'intégralité de vos abonnements aux formats JSON et CSV pour garder le contrôle total de vos données, sans dépendance fermée.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">✉️</div>
+            <h3>Courriers de résiliation</h3>
+            <p>Générez en quelques secondes des modèles de courriers de résiliation formels, prêts à être envoyés pour vous désabonner sans friction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparence technique -->
+    <section class="tech-section" id="tech">
+      <div class="container">
+        <div class="tech-box">
+          <h3>🛡️ Transparence technique & Fonctionnement réel</h3>
+          <ul class="tech-list">
+            <li>
+              <span>💾</span>
+              <div>
+                <strong>Base de données locale (Room / SQLite) :</strong>
+                Vos abonnements, historiques de prix et rappels sont stockés sur votre téléphone dans une base de données locale chiffrable.
+              </div>
+            </li>
+            <li>
+              <span>🔑</span>
+              <div>
+                <strong>Authentification Firebase :</strong>
+                Permet la connexion sécurisée via Google Sign-In ou compte e-mail. Un mode invité démo local est également disponible.
+              </div>
+            </li>
+            <li>
+              <span>🧠</span>
+              <div>
+                <strong>Traitement IA (Google Gemini API) :</strong>
+                Sollicité uniquement lors des requêtes au coach ou de l'analyse d'une photo de facture.
+              </div>
+            </li>
+            <li>
+              <span>⏰</span>
+              <div>
+                <strong>Rappels locaux Android :</strong>
+                Les notifications sont programmées directement par le système Android (AlarmManager) sans passer par un serveur de pistage externe.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Téléchargement -->
+    <section class="features-section" id="download" style="text-align: center; padding-top: 30px;">
+      <div class="container">
+        <div class="section-title">
+          <h2>Télécharger Lumo</h2>
+          <p>Lumo sera disponible gratuitement sur la boutique alternative Uptodown.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 36px 20px; max-width: 580px; margin: 0 auto;">
+          <p style="color: var(--text-gray); margin-bottom: 20px; font-size: 14.5px;">
+            Dès validation de notre fiche par l'équipe éditoriale d'Uptodown, le lien direct sera activé ici pour télécharger le fichier APK officiel sécurisé et signé.
+          </p>
+          <div style="padding: 12px 18px; background: rgba(93, 126, 255, 0.1); border-radius: 12px; font-size: 13px; color: #cbd5e1; display: inline-block;">
+            📦 Identifiant de l'application : <code style="color: var(--neon-purple); font-weight: bold;">com.aistudio.lumo.prod</code>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="privacy.html">Politique de Confidentialité</a>
+      </div>
+      <p>© 2026 Lumo — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
