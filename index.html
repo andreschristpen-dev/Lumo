@@ -1,172 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumo — Éclairez vos dépenses récurrentes</title>
-  <meta name="description" content="Lumo vous aide à centraliser, optimiser et maîtriser vos abonnements récurrents avec alertes proactives et assistant financier.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090914">
+  <meta name="description" content="Lumo vous aide à organiser vos abonnements, suivre vos dépenses récurrentes et anticiper vos prochaines échéances depuis Android.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lumo — Vos abonnements, en toute clarté">
+  <meta property="og:description" content="Une vue claire de vos abonnements, de vos dépenses et de vos prochaines échéances.">
+  <title>Lumo — Vos abonnements, en toute clarté</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- En-tête -->
-  <header>
-    <div class="container nav-wrapper">
-      <a href="index.html" class="logo-brand">
-        <div class="logo-badge">⚡</div>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Lumo, accueil">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
         <span>Lumo</span>
       </a>
-      <nav class="nav-links">
-        <a href="#features">Fonctionnalités</a>
-        <a href="#tech">Architecture</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#comment-ca-marche">Comment ça marche</a>
+        <a href="#transparence">Transparence</a>
         <a href="privacy.html">Confidentialité</a>
       </nav>
+      <a class="nav-cta" href="#telechargement">Découvrir Lumo <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
-  <!-- Section Hero -->
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-pill">
-          <span>✨ Distribution officielle Android</span>
+  <main id="contenu">
+    <section class="hero section-wrap">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> La clarté sur vos dépenses récurrentes</div>
+          <h1>Vos abonnements.<br><span class="gradient-text">Enfin sous contrôle.</span></h1>
+          <p class="hero-lead">Lumo rassemble vos abonnements au même endroit pour vous aider à comprendre vos dépenses et à anticiper chaque échéance.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#telechargement">Découvrir l’application <span aria-hidden="true">→</span></a>
+            <a class="button button-quiet" href="#fonctionnalites">Explorer les fonctionnalités</a>
+          </div>
+          <div class="hero-proof">
+            <span class="proof-icon">✓</span>
+            <span>Suivi clair · Rappels personnalisés · Données maîtrisées</span>
+          </div>
         </div>
-        <h1>
-          Éclairez et maîtrisez vos <br>
-          <span class="gradient-text">abonnements récurrents</span>
-        </h1>
-        <p class="hero-desc">
-          Fini les prélèvements surprises et les abonnements oubliés. Lumo vous offre une visibilité totale sur vos dépenses mensuelles et annuelles avec alertes de renouvellement et conseils personnalisés.
-        </p>
 
-        <div class="cta-group">
-          <!-- Bouton en attente tant que la fiche Uptodown n'est pas encore créée -->
-          <a href="#download" class="btn-primary btn-pending" id="downloadBtn">
-            <span>⏳ Bientôt disponible sur Uptodown</span>
-          </a>
-          <span class="cta-note">
-            <span class="badge-uptodown">APK Signé</span> Fiche en cours de préparation pour Uptodown
-          </span>
+        <div class="product-stage" aria-label="Aperçu illustratif de l'interface Lumo">
+          <div class="stage-orbit orbit-a" aria-hidden="true"></div>
+          <div class="stage-orbit orbit-b" aria-hidden="true"></div>
+          <div class="phone-frame">
+            <div class="phone-top"><span>9:41</span><span>● ● ●</span></div>
+            <div class="app-screen">
+              <div class="app-greeting"><span>Bonjour</span><strong>Votre aperçu</strong></div>
+              <div class="app-total-card">
+                <span>Dépenses mensuelles estimées</span>
+                <strong>— — —</strong>
+                <small>Ajoutez vos abonnements pour commencer</small>
+                <div class="total-sparkline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="app-section-head"><strong>Vos abonnements</strong><span>Voir tout</span></div>
+              <div class="app-empty">
+                <span class="empty-symbol">＋</span>
+                <strong>Votre espace, à vous</strong>
+                <small>Centralisez ici les services que vous utilisez.</small>
+              </div>
+              <div class="app-bottom"><span class="active">◈<small>Accueil</small></span><span>▦<small>Calendrier</small></span><span>◷<small>Historique</small></span><span>⚙<small>Réglages</small></span></div>
+            </div>
+          </div>
+          <div class="floating-note note-top"><span class="note-icon">◷</span><span><strong>Une échéance approche</strong><small>Gardez une longueur d’avance</small></span></div>
+          <div class="floating-note note-bottom"><span class="note-icon note-check">✓</span><span><strong>Tout au même endroit</strong><small>Une vue plus lisible de vos services</small></span></div>
+        </div>
+      </div>
+      <div class="container hero-bottom"><span>CONÇU POUR SIMPLIFIER LE QUOTIDIEN</span><span class="hero-line"></span><span>ANDROID</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="fonctionnalites">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Une meilleure visibilité</span>
+          <h2>Moins de surprises.<br><span class="muted-gradient">Plus de maîtrise.</span></h2>
+          <p>Les petits paiements récurrents sont faciles à oublier. Lumo vous aide à les retrouver, les organiser et suivre leur évolution.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large">
+            <div class="feature-icon icon-purple">▦</div>
+            <span class="feature-kicker">01 / VUE D’ENSEMBLE</span>
+            <h3>Tous vos abonnements au même endroit</h3>
+            <p>Regroupez vos services, leurs montants, leurs fréquences et leurs dates de renouvellement dans un espace organisé.</p>
+            <div class="mini-list">
+              <div><span class="service-dot dot-one">S</span><span><strong>Streaming</strong><small>Vos plateformes vidéo et musique</small></span><span class="mini-tag">Organisé</span></div>
+              <div><span class="service-dot dot-two">C</span><span><strong>Cloud & outils</strong><small>Vos services numériques</small></span><span class="mini-tag">Centralisé</span></div>
+              <div><span class="service-dot dot-three">+</span><span><strong>Autres services</strong><small>Tout ce que vous souhaitez suivre</small></span><span class="mini-tag">Personnalisé</span></div>
+            </div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon icon-blue">◷</div>
+            <span class="feature-kicker">02 / ANTICIPATION</span>
+            <h3>Des rappels à votre rythme</h3>
+            <p>Configurez vos alertes de renouvellement pour penser à vos échéances au bon moment.</p>
+            <div class="feature-visual reminder-visual"><span class="reminder-ring">✓</span><span><strong>Vous gardez le contrôle</strong><small>Choisissez vos rappels</small></span></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">▤</div>
+            <span class="feature-kicker">03 / CALENDRIER</span>
+            <h3>Une vision claire des dates</h3>
+            <p>Retrouvez vos échéances et consultez l’évolution de vos abonnements dans le temps.</p>
+            <div class="calendar-visual"><div class="calendar-head"><span>ÉCHÉANCES</span><span>•••</span></div><div class="calendar-days"><i>L</i><i>M</i><i>M</i><i>J</i><i>V</i><i>S</i><i>D</i></div><div class="calendar-dates"><i>16</i><i>17</i><i class="marked">18</i><i>19</i><i>20</i><i class="marked">21</i><i>22</i></div></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon icon-green">⇅</div>
+            <span class="feature-kicker">04 / VOS DONNÉES</span>
+            <h3>Exportez vos informations</h3>
+            <p>Conservez une copie de vos données grâce aux exports disponibles depuis l’application.</p>
+            <div class="export-pills"><span>PDF</span><span>CSV</span><span>JSON</span></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon icon-gold">⌁</div>
+            <span class="feature-kicker">05 / PROTECTION</span>
+            <h3>Un espace mieux protégé</h3>
+            <p>Utilisez le verrouillage par code PIN et, si votre appareil le permet, l’authentification biométrique.</p>
+            <div class="security-visual"><span>● ● ● ●</span><b>Verrouillage de l’application</b><span class="security-check">✓</span></div>
+          </article>
+          <article class="feature-card feature-card-accent">
+            <div class="feature-icon icon-white">◎</div>
+            <span class="feature-kicker">06 / FLEXIBILITÉ</span>
+            <h3>Une organisation qui vous ressemble</h3>
+            <p>Adaptez vos catégories, vos préférences et vos paramètres pour suivre vos abonnements comme vous le souhaitez.</p>
+            <a class="text-link" href="#comment-ca-marche">Voir comment ça marche <span aria-hidden="true">→</span></a>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Fonctionnalités clés -->
-    <section class="features-section" id="features">
-      <div class="container">
-        <div class="section-title">
-          <h2>Tout pour garder le contrôle</h2>
-          <p>Une expérience fluide, sombre et conçue pour votre sérénité financière.</p>
+    <section class="workflow section-wrap" id="comment-ca-marche">
+      <div class="container workflow-grid">
+        <div class="section-heading align-left">
+          <span class="eyebrow">Simple dès le départ</span>
+          <h2>Votre suivi,<br><span class="gradient-text">en trois étapes.</span></h2>
+          <p>Pas besoin de connecter vos comptes bancaires. Vous renseignez les abonnements que vous souhaitez suivre et Lumo organise les informations.</p>
+          <a class="button button-secondary" href="#telechargement">En savoir plus <span aria-hidden="true">→</span></a>
         </div>
-
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-icon">📊</div>
-            <h3>Tableau de bord intelligent</h3>
-            <p>Visualisez instantanément vos totaux réels mensuels et annuels, avec suivi de budget et répartition par catégorie (Streaming, Musique, Cloud, etc.).</p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🔔</div>
-            <h3>Alertes anti-prélèvement</h3>
-            <p>Recevez des notifications précises avant chaque reconduction automatique et une alerte critique 24 heures avant l'expiration de vos périodes d'essai gratuit.</p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🤖</div>
-            <h3>Assistant IA & Scanner Facture</h3>
-            <p>Analysez vos reçus d'abonnement en un clin d'œil grâce à la reconnaissance optique (OCR) et posez vos questions d'optimisation à l'assistant IA intégré.</p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🔒</div>
-            <h3>Sécurité & Verrouillage PIN</h3>
-            <p>Protégez vos données financières avec un code PIN personnalisé à 4 chiffres ou le déverrouillage biométrique (empreinte / visage).</p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">📁</div>
-            <h3>Sauvegarde & Restauration</h3>
-            <p>Exportez l'intégralité de vos abonnements aux formats JSON et CSV pour garder le contrôle total de vos données, sans dépendance fermée.</p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">✉️</div>
-            <h3>Courriers de résiliation</h3>
-            <p>Générez en quelques secondes des modèles de courriers de résiliation formels, prêts à être envoyés pour vous désabonner sans friction.</p>
-          </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><div><h3>Ajoutez vos services</h3><p>Renseignez le nom, le prix, la fréquence et la date de renouvellement.</p></div><span class="step-symbol">＋</span></article>
+          <article class="step"><span class="step-number">02</span><div><h3>Organisez votre aperçu</h3><p>Retrouvez vos informations, vos catégories et vos prochaines échéances.</p></div><span class="step-symbol">▦</span></article>
+          <article class="step"><span class="step-number">03</span><div><h3>Suivez et ajustez</h3><p>Consultez vos données et modifiez vos rappels selon vos besoins.</p></div><span class="step-symbol">↗</span></article>
         </div>
       </div>
     </section>
 
-    <!-- Transparence technique -->
-    <section class="tech-section" id="tech">
-      <div class="container">
-        <div class="tech-box">
-          <h3>🛡️ Transparence technique & Fonctionnement réel</h3>
-          <ul class="tech-list">
-            <li>
-              <span>💾</span>
-              <div>
-                <strong>Base de données locale (Room / SQLite) :</strong>
-                Vos abonnements, historiques de prix et rappels sont stockés sur votre téléphone dans une base de données locale chiffrable.
-              </div>
-            </li>
-            <li>
-              <span>🔑</span>
-              <div>
-                <strong>Authentification Firebase :</strong>
-                Permet la connexion sécurisée via Google Sign-In ou compte e-mail. Un mode invité démo local est également disponible.
-              </div>
-            </li>
-            <li>
-              <span>🧠</span>
-              <div>
-                <strong>Traitement IA (Google Gemini API) :</strong>
-                Sollicité uniquement lors des requêtes au coach ou de l'analyse d'une photo de facture.
-              </div>
-            </li>
-            <li>
-              <span>⏰</span>
-              <div>
-                <strong>Rappels locaux Android :</strong>
-                Les notifications sont programmées directement par le système Android (AlarmManager) sans passer par un serveur de pistage externe.
-              </div>
-            </li>
-          </ul>
+    <section class="trust section-wrap" id="transparence">
+      <div class="container trust-panel">
+        <div class="trust-copy">
+          <span class="eyebrow">La transparence avant tout</span>
+          <h2>Vos abonnements.<br>Vos décisions.</h2>
+          <p>Lumo est un outil de suivi. L’application ne prélève pas l’argent de vos abonnements et ne les résilie pas à votre place. Vous gardez la main sur vos contrats et vos paiements auprès de chaque fournisseur.</p>
+          <a class="text-link" href="privacy.html">Lire la politique de confidentialité <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="trust-points">
+          <div><span class="trust-check">✓</span><span><strong>Pas de connexion bancaire</strong><small>Ajoutez vous-même les informations à suivre.</small></span></div>
+          <div><span class="trust-check">✓</span><span><strong>Rappels locaux</strong><small>Les alertes de renouvellement sont programmées sur Android.</small></span></div>
+          <div><span class="trust-check">✓</span><span><strong>Informations honnêtes</strong><small>Les fonctionnalités affichées correspondent à la version actuelle.</small></span></div>
         </div>
       </div>
     </section>
 
-    <!-- Section Téléchargement -->
-    <section class="features-section" id="download" style="text-align: center; padding-top: 30px;">
-      <div class="container">
-        <div class="section-title">
-          <h2>Télécharger Lumo</h2>
-          <p>Lumo sera disponible gratuitement sur la boutique alternative Uptodown.</p>
-        </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 36px 20px; max-width: 580px; margin: 0 auto;">
-          <p style="color: var(--text-gray); margin-bottom: 20px; font-size: 14.5px;">
-            Dès validation de notre fiche par l'équipe éditoriale d'Uptodown, le lien direct sera activé ici pour télécharger le fichier APK officiel sécurisé et signé.
-          </p>
-          <div style="padding: 12px 18px; background: rgba(93, 126, 255, 0.1); border-radius: 12px; font-size: 13px; color: #cbd5e1; display: inline-block;">
-            📦 Identifiant de l'application : <code style="color: var(--neon-purple); font-weight: bold;">com.aistudio.lumo.prod</code>
-          </div>
-        </div>
+    <section class="download section-wrap" id="telechargement">
+      <div class="container download-panel">
+        <div class="download-orb" aria-hidden="true"></div>
+        <span class="eyebrow">Bientôt disponible</span>
+        <h2>Prêt à y voir plus clair ?</h2>
+        <p>La page de téléchargement sera activée lorsque la version officielle de Lumo sera publiée.</p>
+        <span class="button button-disabled" aria-disabled="true">Téléchargement bientôt disponible</span>
+        <small class="download-note">Application Android · Distribution en préparation</small>
       </div>
     </section>
   </main>
 
-  <!-- Pied de page -->
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Accueil</a>
-        <a href="privacy.html">Politique de Confidentialité</a>
-      </div>
-      <p>© 2026 Lumo — Tous droits réservés.</p>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Lumo</span></a><p>Une vision plus claire de vos abonnements récurrents.</p></div>
+      <div class="footer-nav"><strong>Explorer</strong><a href="#fonctionnalites">Fonctionnalités</a><a href="#comment-ca-marche">Comment ça marche</a><a href="#telechargement">Téléchargement</a></div>
+      <div class="footer-nav"><strong>Informations</strong><a href="privacy.html">Confidentialité</a><a href="mailto:">Contact</a></div>
     </div>
+    <div class="container footer-bottom"><span>© 2026 Lumo. Tous droits réservés.</span><span>Conçu pour vous aider à garder le contrôle.</span></div>
   </footer>
-
 </body>
 </html>
