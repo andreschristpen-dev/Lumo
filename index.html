@@ -3,176 +3,160 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f1e9">
-  <meta name="description" content="Lumo vous aide à organiser vos abonnements, suivre vos dépenses récurrentes et anticiper vos prochaines échéances depuis Android.">
+  <meta name="theme-color" content="#0f0f14">
+  <meta name="description" content="Lumo vous aide à organiser vos abonnements, suivre vos dépenses récurrentes et anticiper vos prochaines échéances. Éclairez vos dépenses.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lumo — Reprenez le fil de vos abonnements">
-  <meta property="og:description" content="Vos abonnements réunis. Vos échéances plus claires. Vos décisions, toujours les vôtres.">
-  <title>Lumo — Reprenez le fil de vos abonnements</title>
+  <meta property="og:title" content="Lumo — Éclairez vos dépenses">
+  <meta property="og:description" content="Reprenez le contrôle de vos abonnements avec Lumo.">
+  <title>Lumo — Éclairez vos dépenses</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f0f14;--panel:#171720;--panel2:#1d1c28;--line:rgba(255,255,255,.1);--text:#f7f5fc;--muted:#aaa6b8;--purple:#8b5cf6;--lav:#a78bfa;--green:#c4f078;--font:"DM Sans",sans-serif;--display:"Manrope",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}button,a{-webkit-tap-highlight-color:transparent}.container{width:min(1160px,calc(100% - 44px));margin:auto}.skip{position:absolute;top:-60px;left:16px;z-index:1000;padding:10px;background:#fff;color:#111}.skip:focus{top:10px}
+    .header{position:sticky;top:0;z-index:100;background:rgba(15,15,20,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:inline-flex;align-items:center;gap:10px;font:800 25px var(--display);letter-spacing:-1.5px}.brand-icon{width:32px;height:32px;display:grid;place-items:center;border-radius:11px;background:linear-gradient(140deg,var(--purple),var(--lav));box-shadow:0 5px 22px #8b5cf644}.brand-icon svg{width:21px;height:21px}.brand .dot{color:var(--lav)}.nav-links{display:flex;align-items:center;gap:30px}.nav-links a{font-size:13px;color:#c4c0cf;transition:color .2s}.nav-links a:hover{color:white}.nav-actions{display:flex;align-items:center;gap:12px}.lang-btn,.burger{border:1px solid var(--line);background:transparent;border-radius:10px;padding:9px 12px;font-size:12px}.primary-btn,.secondary-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 19px;border-radius:12px;font-weight:700;font-size:13px;transition:transform .25s,box-shadow .25s,border-color .25s}.primary-btn{background:linear-gradient(115deg,var(--purple),var(--lav));color:white;box-shadow:0 9px 28px #8b5cf633}.primary-btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px #8b5cf655}.secondary-btn{border:1px solid #ffffff27;background:#ffffff08;color:#f3efff}.secondary-btn:hover{border-color:var(--lav);transform:translateY(-2px)}.burger{display:none;width:42px;height:42px;padding:10px}.burger span{display:block;height:2px;background:white;margin:5px 0;border-radius:4px;transition:.25s}
+    .hero{position:relative;overflow:hidden;padding:100px 0 78px}.hero:before{content:"";position:absolute;width:650px;height:650px;right:-130px;top:-200px;background:radial-gradient(circle,#7043db35,transparent 67%);pointer-events:none}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,black,transparent 85%)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:65px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#c4b2ff;font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lav);box-shadow:0 0 14px var(--lav)}h1,h2,h3,p{margin-top:0}.hero h1{font:800 clamp(42px,6vw,72px)/1.04 var(--display);letter-spacing:-3.8px;margin:23px 0 22px}.gradient-text{background:linear-gradient(100deg,#a78bfa,#d4c5ff 55%,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy>p{max-width:540px;color:var(--muted);font-size:16px;line-height:1.85}.hero-buttons{display:flex;flex-wrap:wrap;gap:13px;margin:30px 0 24px}.trust-line{display:flex;flex-wrap:wrap;gap:10px 18px;color:#aaa6b8;font-size:11px}.trust-line span:before{content:"✓";color:var(--green);margin-right:7px}.hero-visual{position:relative;min-height:520px;display:grid;place-items:center}.glow{position:absolute;width:390px;height:390px;border-radius:50%;background:#7545d32b;filter:blur(25px)}.phone{position:relative;z-index:2;width:260px;padding:12px;border-radius:35px;background:linear-gradient(145deg,#343140,#111117 45%,#2b2835);border:1px solid #ffffff35;box-shadow:0 35px 90px #0009,0 0 55px #8b5cf626;transform:rotate(-4deg);animation:float 6s ease-in-out infinite}.phone-screen{min-height:455px;border-radius:25px;background:linear-gradient(160deg,#211c32,#111119 65%);padding:18px 15px;overflow:hidden}.phone-top{display:flex;justify-content:space-between;color:#d9d1ef;font-size:10px}.phone-brand{font:800 18px var(--display);margin:20px 0 3px}.phone-muted{font-size:9px;color:#a9a1b8}.balance-card{margin:16px 0;padding:16px;border-radius:17px;background:linear-gradient(135deg,#8b5cf6,#5f3bb5);box-shadow:0 10px 25px #0004}.balance-card small{display:block;color:#e8ddff;font-size:9px}.balance-card strong{display:block;font:800 27px var(--display);margin:6px 0}.balance-card span{font-size:9px;color:#eee5ff}.phone-section-title{display:flex;justify-content:space-between;font-size:10px;margin:18px 0 9px}.phone-item{display:flex;align-items:center;gap:9px;padding:10px 8px;border-radius:12px;background:#ffffff09;margin:7px 0}.app-dot{width:29px;height:29px;border-radius:9px;display:grid;place-items:center;background:#a78bfa26;color:#cdbaff;font-weight:800}.phone-item b{display:block;font-size:9px}.phone-item small{display:block;font-size:8px;color:#a9a1b8}.phone-item em{margin-left:auto;font-size:9px;font-style:normal;color:#d6c9ff}.phone-chart{height:60px;display:flex;align-items:end;gap:7px;padding:8px 4px}.phone-chart i{flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(var(--lav),#6742c3);height:var(--bar)}.float-card{position:absolute;z-index:3;padding:13px 15px;border-radius:15px;background:#201d2b;border:1px solid #ffffff20;box-shadow:0 15px 45px #0007;animation:float 5s ease-in-out infinite}.float-card b{display:block;font-size:12px}.float-card small{font-size:9px;color:var(--muted)}.float-card .check{color:var(--green);margin-right:5px}.float-one{top:75px;left:0}.float-two{right:-3px;bottom:78px;animation-delay:-2s}.float-icon{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#8b5cf633;color:#c7b4ff;margin-right:7px}@keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(-2deg)}}
+    .trust-band{border-block:1px solid var(--line);background:#14131b}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-item{padding:25px 18px;border-right:1px solid var(--line)}.trust-item:last-child{border:0}.trust-item strong{display:block;font:800 17px var(--display);color:#d9ccff;margin-bottom:4px}.trust-item span{font-size:11px;color:var(--muted)}
+    .section{padding:100px 0}.section-head{max-width:680px;margin-bottom:45px}.section-label{color:var(--lav);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.section h2{font:800 clamp(32px,4.5vw,51px)/1.1 var(--display);letter-spacing:-2px;margin:13px 0 14px}.section-head p{color:var(--muted);font-size:14px;line-height:1.8;max-width:600px}.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature-card{min-height:240px;padding:25px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#191821,#14141b);transition:transform .3s,border-color .3s,box-shadow .3s}.feature-card:hover{transform:translateY(-6px);border-color:#a78bfa80;box-shadow:0 18px 45px #0005}.feature-icon{width:45px;height:45px;border-radius:14px;display:grid;place-items:center;background:#8b5cf626;color:#c5b1ff;margin-bottom:20px}.feature-icon svg{width:23px;height:23px}.feature-card h3{font:700 17px var(--display);margin-bottom:8px}.feature-card p{font-size:12px;line-height:1.75;color:var(--muted);margin-bottom:0}.tag{display:inline-block;margin-top:13px;padding:5px 9px;border:1px solid #a78bfa55;border-radius:30px;color:#c9b8ff;font-size:9px;font-weight:700;letter-spacing:.4px}
+    .how{background:linear-gradient(180deg,#121119,#15131e 100%);border-block:1px solid var(--line)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:25px;border-radius:18px;border:1px solid var(--line);background:#ffffff05}.step-num{font:800 38px var(--display);color:#8b5cf6;opacity:.9}.step h3{font:700 18px var(--display);margin:14px 0 8px}.step p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
+    .screens-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.screen-card{padding:14px;border:1px solid var(--line);border-radius:20px;background:#17161f;text-align:center}.screen-preview{height:300px;border-radius:15px;background:linear-gradient(155deg,#29213d,#111119);padding:17px 12px;overflow:hidden;position:relative}.screen-preview:before{content:"";position:absolute;width:130px;height:130px;background:#8b5cf633;filter:blur(30px);top:-35px;right:-35px}.screen-top{position:relative;text-align:left;font-size:10px;color:#e8e0ff}.screen-widget{position:relative;margin-top:18px;padding:12px;border-radius:12px;background:#ffffff0d;text-align:left}.screen-widget small{display:block;font-size:8px;color:#bcb2d3}.screen-widget b{display:block;font-size:17px;margin-top:5px}.screen-lines{position:relative;margin-top:12px}.screen-lines i{display:block;height:34px;margin:8px 0;border-radius:9px;background:#ffffff0d;border:1px solid #ffffff0c}.screen-bars{height:100px;display:flex;align-items:end;gap:8px;padding:12px}.screen-bars i{flex:1;height:var(--bar);background:linear-gradient(var(--lav),#6742c3);border-radius:5px 5px 0 0}.screen-card h3{font:700 13px var(--display);margin:14px 0 3px}.screen-card p{font-size:10px;color:var(--muted);margin:0}.mock-note{margin-top:18px;color:#898497;font-size:10px;text-align:center}
+    .pricing{background:#14131b;border-block:1px solid var(--line)}.pricing-note{padding:12px 15px;border:1px solid #a78bfa4d;background:#8b5cf615;border-radius:12px;color:#d7caff;font-size:11px;line-height:1.7;margin-bottom:22px}.price-controls{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:25px 0}.billing-toggle{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:12px;background:#ffffff06}.billing-toggle button{border:0;background:transparent;padding:8px 12px;border-radius:8px;color:var(--muted);font-size:11px}.billing-toggle button[aria-pressed=true]{background:#8b5cf6;color:white}.save{color:var(--green);font-size:10px}.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.price-card{position:relative;padding:25px;border:1px solid var(--line);border-radius:20px;background:#191821}.price-card.popular{border-color:#9b79f6;box-shadow:0 0 0 1px #8b5cf633,0 20px 50px #0004}.popular-label{position:absolute;top:-12px;right:20px;background:linear-gradient(110deg,var(--purple),var(--lav));padding:5px 11px;border-radius:30px;font-size:9px;font-weight:800}.price-card h3{font:800 18px var(--display);margin:0 0 7px}.price-card>p{color:var(--muted);font-size:11px;min-height:35px}.price{font:800 32px var(--display);letter-spacing:-1px;margin:18px 0 3px}.price small{font:500 11px var(--font);color:var(--muted);letter-spacing:0}.annual-hint{font-size:10px;color:var(--green);min-height:17px}.price-list{list-style:none;padding:0;margin:20px 0 0}.price-list li{font-size:11px;color:#d0cbd9;padding:8px 0;border-bottom:1px solid #ffffff0d}.price-list li:before{content:"✓";color:var(--green);margin-right:9px}.price-card .secondary-btn,.price-card .primary-btn{width:100%;margin-top:22px}.disabled-btn{opacity:.55;cursor:not-allowed;box-shadow:none}.money-note{font-size:10px;color:#9691a3;margin-top:20px}
+    .faq-list{max-width:820px}.faq-item{border-bottom:1px solid var(--line)}.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:21px 0;background:none;border:0;text-align:left;font:700 14px var(--display)}.faq-question span:last-child{font-size:22px;color:var(--lav);transition:transform .25s}.faq-question[aria-expanded=true] span:last-child{transform:rotate(45deg)}.faq-answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}.faq-answer>div{overflow:hidden}.faq-answer p{padding:0 35px 18px 0;margin:0;color:var(--muted);font-size:12px;line-height:1.8}.faq-item.open .faq-answer{grid-template-rows:1fr}
+    .download-section{padding:20px 0 100px}.download-panel{position:relative;overflow:hidden;text-align:center;padding:75px 28px;border-radius:28px;background:radial-gradient(circle at 80% 15%,#c4b5fd55,transparent 35%),linear-gradient(120deg,#6538c5,#8b5cf6 52%,#6542b7);box-shadow:0 25px 70px #0005}.download-panel:before,.download-panel:after{content:"";position:absolute;border:1px solid #ffffff24;border-radius:50%;width:360px;height:360px;top:-180px;left:-80px}.download-panel:after{width:500px;height:500px;top:auto;left:auto;bottom:-350px;right:-120px}.download-panel>*{position:relative;z-index:1}.download-panel .section-label{color:#e4d9ff}.download-panel h2{font:800 clamp(35px,5vw,55px)/1.1 var(--display);letter-spacing:-2px;margin:13px 0}.download-panel p{max-width:540px;margin:0 auto 25px;color:#eee7ff;font-size:13px;line-height:1.8}.download-panel .primary-btn{background:white;color:#5f36b6;box-shadow:0 10px 25px #32126b55}.download-panel .secondary-btn{border-color:#ffffff7a;background:#ffffff15}.download-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px}.download-note{display:block;margin-top:19px;color:#e8ddff;font-size:10px}.qr-placeholder{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:9px 13px;border:1px dashed #ffffff8a;border-radius:12px;color:#f4edff;font-size:10px}.qr-pattern{width:37px;height:37px;background:repeating-conic-gradient(#fff 0 25%,transparent 0 50%) 0 0/9px 9px;border:4px solid white;opacity:.75}
+    .footer{border-top:1px solid var(--line);padding:35px 0 25px}.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:25px}.footer-brand p{color:var(--muted);font-size:11px;margin:10px 0}.footer-links{display:flex;flex-wrap:wrap;gap:20px}.footer-links a{font-size:11px;color:#bbb6c8}.socials{display:flex;gap:9px}.socials a{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--line);border-radius:10px;font-size:11px;color:#c8c1d7}.footer-bottom{display:flex;justify-content:space-between;gap:15px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:10px;color:#807b8e}
+    .mobile-download{display:none;position:fixed;z-index:90;left:14px;right:14px;bottom:12px;padding:11px;border:1px solid #ffffff20;border-radius:16px;background:#181620eF;backdrop-filter:blur(15px);box-shadow:0 10px 35px #0009}.mobile-download .primary-btn{width:100%;padding:12px}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+    @media(max-width:900px){.hero-grid{gap:25px}.hero h1{font-size:58px}.hero-visual{min-height:480px}.float-one{left:-10px}.float-two{right:-10px}.features-grid{grid-template-columns:repeat(2,1fr)}.screens-row{grid-template-columns:repeat(2,1fr)}.screen-preview{height:270px}.trust-item{padding:20px 12px}.price-grid{gap:10px}.price-card{padding:20px}}
+    @media(max-width:680px){.container{width:min(100% - 34px,520px)}.nav{height:66px}.nav-links{display:none;position:absolute;left:0;right:0;top:66px;padding:16px 22px 22px;background:#15141d;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:13px 4px;border-bottom:1px solid var(--line)}.nav-actions>.primary-btn{display:none}.burger{display:block}.burger[aria-expanded=true] span:first-child{transform:translateY(7px) rotate(45deg)}.burger[aria-expanded=true] span:nth-child(2){opacity:0}.burger[aria-expanded=true] span:last-child{transform:translateY(-7px) rotate(-45deg)}.hero{padding:68px 0 45px}.hero-grid{grid-template-columns:1fr;gap:12px}.hero h1{font-size:clamp(43px,12vw,60px);letter-spacing:-2.7px}.hero-copy>p{font-size:14px}.hero-buttons{gap:10px}.hero-buttons .primary-btn,.hero-buttons .secondary-btn{flex:1;padding:12px 10px;font-size:11px}.trust-line{font-size:10px}.hero-visual{min-height:450px;margin-top:4px}.phone{width:238px}.phone-screen{min-height:420px}.float-one{top:42px;left:0}.float-two{right:0;bottom:50px}.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.trust-item strong{font-size:14px}.trust-item span{font-size:10px}.section{padding:72px 0}.section h2{font-size:37px}.section-head{margin-bottom:28px}.features-grid{grid-template-columns:1fr}.feature-card{min-height:0;padding:22px}.steps{grid-template-columns:1fr}.step{padding:20px}.screens-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin-right:-17px}.screen-card{min-width:72%;scroll-snap-align:start}.screen-preview{height:280px}.price-controls{align-items:flex-start;flex-direction:column}.price-grid{grid-template-columns:1fr}.price-card{padding:23px}.price-card.popular{margin-top:8px}.download-section{padding:0 0 85px}.download-panel{padding:58px 18px;border-radius:20px}.download-panel p{font-size:12px}.download-actions{flex-direction:column;align-items:stretch}.download-actions .primary-btn,.download-actions .secondary-btn{width:100%}.footer-top{flex-direction:column}.footer-links{gap:13px 18px}.footer-bottom{flex-direction:column}.mobile-download{display:block}body{padding-bottom:72px}}
+    @media(max-width:390px){.hero h1{font-size:42px}.hero-buttons{flex-direction:column;align-items:stretch}.float-card{padding:10px}.float-one{left:-4px}.float-two{right:-4px}.trust-item{padding:16px 9px}.trust-item strong{font-size:12px}}
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <header class="site-header">
-    <div class="container nav-shell">
-      <a class="brand" href="index.html" aria-label="Lumo, accueil">
-        <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span>lumo<span class="brand-period">.</span></span>
-      </a>
-      <nav class="main-nav" aria-label="Navigation principale">
-        <a href="#fonctionnalites">Le produit</a>
-        <a href="#methode">La méthode</a>
-        <a href="#transparence">Sans détour</a>
-      </nav>
-      <a class="nav-cta" href="#telechargement">Découvrir Lumo <span>↗</span></a>
+<a class="skip" href="#main" data-fr="Aller au contenu" data-en="Skip to content">Aller au contenu</a>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#" aria-label="Lumo accueil"><span class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 18V9m7 9V4m7 14v-6"/></svg></span><span>lumo<span class="dot">.</span></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigation">
+      <a href="#features" data-fr="Fonctionnalités" data-en="Features">Fonctionnalités</a><a href="#pricing" data-fr="Tarifs" data-en="Pricing">Tarifs</a><a href="#faq" data-fr="FAQ" data-en="FAQ">FAQ</a><a href="#download" data-fr="Télécharger" data-en="Download">Télécharger</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle" type="button" aria-label="Switch language">EN</button>
+      <a class="primary-btn" href="#download" data-fr="Télécharger ↗" data-en="Get Lumo ↗">Télécharger ↗</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
     </div>
-  </header>
-
-  <main id="contenu">
-    <section class="hero">
-      <div class="hero-gridline" aria-hidden="true"></div>
-      <div class="container hero-layout">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-mark"></span> LE SUIVI D'ABONNEMENTS, AUTREMENT</div>
-          <h1>Les petits<br>prélèvements.<br><em>La grande</em><br><em class="accent-word">visibilité.</em></h1>
-          <p class="hero-intro">On s'abonne en deux secondes. On oublie parfois pendant des mois. Lumo rassemble vos abonnements pour que vous sachiez ce qui revient, quand, et pour combien.</p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="#fonctionnalites">Explorer Lumo <span>↗</span></a>
-            <a class="text-action" href="#methode">Voir comment ça marche <span>↓</span></a>
-          </div>
-          <div class="hero-footnote"><span class="footnote-line"></span><span>UN ESPACE CLAIR. AUCUNE CONNEXION BANCAIRE.</span></div>
-        </div>
-
-        <div class="hero-art" aria-label="Illustration de l'interface de suivi Lumo">
-          <div class="art-caption caption-top"><span>VOTRE VUE D'ENSEMBLE</span><span>01 — 04</span></div>
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="receipt receipt-back"><span class="receipt-label">PROCHAINE ÉCHÉANCE</span><strong>Dans votre<br>calendrier.</strong><div class="receipt-rule"></div><span class="receipt-date">RAPPELS PERSONNALISÉS</span></div>
-          <div class="dashboard-card">
-            <div class="dash-top"><span class="dash-brand"><b class="mini-mark">l.</b> lumo</span><span class="dash-menu">•••</span></div>
-            <div class="dash-greeting"><span>VOTRE ESPACE</span><strong>Tout est plus clair.</strong></div>
-            <div class="dash-total"><span>DÉPENSES RÉCURRENTES</span><strong>— — —</strong><small>Ajoutez vos abonnements pour commencer</small><div class="dash-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-            <div class="dash-list-head"><b>Vos services</b><span>À organiser</span></div>
-            <div class="dash-row"><span class="service-icon service-purple">S</span><span><b>Streaming</b><small>Films, séries, musique</small></span><span class="row-arrow">↗</span></div>
-            <div class="dash-row"><span class="service-icon service-lime">C</span><span><b>Cloud & outils</b><small>Stockage, productivité</small></span><span class="row-arrow">↗</span></div>
-            <div class="dash-row"><span class="service-icon service-orange">＋</span><span><b>À votre façon</b><small>Vos autres abonnements</small></span><span class="row-arrow">↗</span></div>
-            <div class="dash-bottom"><span>APERÇU ILLUSTRATIF</span><span>01 / LUMO</span></div>
-          </div>
-          <div class="floating-stamp"><span class="stamp-star">✳</span><span>GARDER<br>LE FIL</span></div>
-          <div class="art-caption caption-bottom"><span>VOS DONNÉES, VOTRE RYTHME</span><span>ANDROID</span></div>
-        </div>
-      </div>
-      <div class="container hero-strip"><span>MOINS D'OUBLIS</span><i></i><span>PLUS DE VISIBILITÉ</span><i></i><span>TOUJOURS À VOTRE MAIN</span></div>
-    </section>
-
-    <section class="manifesto section-pad" id="fonctionnalites">
-      <div class="container">
-        <div class="section-topline"><span>01 / CE QUE FAIT LUMO</span><span>LE QUOTIDIEN, EN PLUS LISIBLE</span></div>
-        <div class="manifesto-heading">
-          <h2>Reprenez le fil<br>de <span>ce qui revient.</span></h2>
-          <p>Pas de tableau compliqué. Pas de connexion à votre banque. Juste un endroit pour retrouver les informations que vous décidez de suivre.</p>
-        </div>
-        <div class="feature-layout">
-          <article class="feature feature-main reveal">
-            <div class="feature-meta"><span>01 — CENTRALISER</span><span class="feature-symbol">↗</span></div>
-            <div class="feature-content"><h3>Tout au même endroit.<br>Enfin.</h3><p>Rassemblez les noms, montants, fréquences et dates de renouvellement de vos services dans un espace organisé.</p></div>
-            <div class="service-stack">
-              <div class="stack-row"><span class="stack-logo logo-violet">S</span><span><b>Streaming</b><small>Vos plateformes vidéo et musique</small></span><span class="stack-state">À SUIVRE</span></div>
-              <div class="stack-row"><span class="stack-logo logo-green">C</span><span><b>Cloud & outils</b><small>Vos services numériques</small></span><span class="stack-state">À SUIVRE</span></div>
-              <div class="stack-row"><span class="stack-logo logo-orange">＋</span><span><b>Autres services</b><small>Ce que vous choisissez de suivre</small></span><span class="stack-state">À SUIVRE</span></div>
-            </div>
-            <span class="feature-index">A / 01</span>
-          </article>
-          <article class="feature feature-reminders reveal">
-            <div class="feature-meta"><span>02 — ANTICIPER</span><span class="feature-symbol">◷</span></div>
-            <div class="reminder-art"><div class="reminder-ring"><span>J-</span><b>03</b></div><div class="reminder-lines"><i></i><i></i><i></i></div></div>
-            <h3>Le bon rappel.<br>Au bon moment.</h3><p>Choisissez vos alertes de renouvellement pour ne pas découvrir une échéance trop tard.</p><span class="feature-index">B / 02</span>
-          </article>
-          <article class="feature feature-calendar reveal">
-            <div class="feature-meta"><span>03 — VISUALISER</span><span class="feature-symbol">▦</span></div>
-            <div class="calendar-art"><div class="calendar-title"><b>ÉCHÉANCES</b><span>NOV. 2026</span></div><div class="calendar-grid"><i>L</i><i>M</i><i>M</i><i>J</i><i>V</i><i>S</i><i>D</i><span>16</span><span>17</span><span class="date-mark">18</span><span>19</span><span>20</span><span class="date-mark date-mark-alt">21</span><span>22</span></div></div>
-            <h3>Les dates en<br>perspective.</h3><p>Retrouvez vos prochaines échéances et consultez l'évolution de vos abonnements.</p><span class="feature-index">C / 03</span>
-          </article>
-          <article class="feature feature-export reveal">
-            <div class="feature-meta"><span>04 — GARDER</span><span class="feature-symbol">⇩</span></div>
-            <div class="export-art"><span>PDF</span><span>CSV</span><span>JSON</span><div class="export-arrow">↓</div></div>
-            <h3>Vos données.<br>Vos fichiers.</h3><p>Exportez vos informations depuis l'application dans les formats disponibles.</p><span class="feature-index">D / 04</span>
-          </article>
-          <article class="feature feature-security reveal">
-            <div class="feature-meta"><span>05 — PROTÉGER</span><span class="feature-symbol">⌑</span></div>
-            <div class="lock-art"><div class="lock-shackle"></div><div class="lock-body"><span>••••</span></div><i>✓</i></div>
-            <h3>Un espace à vous.</h3><p>Ajoutez un verrouillage par code PIN et, si votre appareil le permet, utilisez la biométrie.</p><span class="feature-index">E / 05</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="statement section-pad" id="methode">
-      <div class="container statement-layout">
-        <div class="statement-side"><span class="section-kicker">02 / LA MÉTHODE</span><span class="side-vertical">SIMPLE PAR CONCEPTION</span></div>
-        <div class="statement-main">
-          <h2>Vous ajoutez.<br>Vous organisez.<br><em>Lumo vous éclaire.</em></h2>
-          <p class="statement-lead">Le suivi reste entre vos mains. Vous choisissez les abonnements à renseigner et les informations à consulter.</p>
-          <div class="method-list">
-            <article class="method-step reveal"><span class="method-number">01</span><div><h3>Ajoutez vos services</h3><p>Indiquez le nom, le prix, la fréquence et la date de renouvellement.</p></div><span class="method-mark">＋</span></article>
-            <article class="method-step reveal"><span class="method-number">02</span><div><h3>Retrouvez votre aperçu</h3><p>Consultez vos abonnements, vos catégories et vos prochaines échéances.</p></div><span class="method-mark">⌁</span></article>
-            <article class="method-step reveal"><span class="method-number">03</span><div><h3>Ajustez à votre rythme</h3><p>Modifiez vos informations et vos rappels quand votre situation évolue.</p></div><span class="method-mark">↗</span></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="truth section-pad" id="transparence">
-      <div class="container truth-panel reveal">
-        <div class="truth-heading"><span class="section-kicker">03 / SANS DÉTOUR</span><h2>Clair sur<br>vos abonnements.<br><em>Clair sur Lumo.</em></h2></div>
-        <div class="truth-copy"><p>Lumo est un outil de suivi. L'application ne prélève pas l'argent de vos abonnements et ne les résilie pas à votre place. Vous gardez la main sur vos contrats et vos paiements auprès de chaque fournisseur.</p>
-          <div class="truth-points"><div><span>01</span><b>Pas de connexion bancaire</b></div><div><span>02</span><b>Vous saisissez les informations</b></div><div><span>03</span><b>Les fonctions présentées correspondent à la version actuelle</b></div></div>
-          <a class="text-action dark-action" href="privacy.html">Lire la politique de confidentialité <span>↗</span></a>
-        </div>
-        <div class="truth-seal" aria-hidden="true"><span>✳</span><b>LA CLARTÉ<br>AVANT TOUT</b><small>LUMO / 2026</small></div>
-      </div>
-    </section>
-
-    <section class="download section-pad" id="telechargement">
-      <div class="container download-panel">
-        <div class="download-orbit" aria-hidden="true"></div>
-        <span class="section-kicker">04 / PROCHAINE ÉTAPE</span>
-        <h2>Le fil est entre<br><em>vos mains.</em></h2>
-        <p>La page de téléchargement sera activée lorsque la version officielle de Lumo sera publiée.</p>
-        <span class="button button-light" aria-disabled="true">Téléchargement bientôt disponible</span>
-        <small>APPLICATION ANDROID · DISTRIBUTION EN PRÉPARATION</small>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-top">
-      <a class="brand footer-brand" href="index.html"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span>lumo<span class="brand-period">.</span></span></a>
-      <p>Moins d'oublis. Plus de visibilité.<br>Vos décisions, toujours les vôtres.</p>
-      <div class="footer-links"><a href="#fonctionnalites">Le produit</a><a href="#methode">La méthode</a><a href="privacy.html">Confidentialité</a><a href="privacy.html#contact">Contact</a></div>
+  </div>
+</header>
+<main id="main">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow" data-fr="VOTRE ARGENT, VOTRE VISIBILITÉ" data-en="YOUR MONEY, YOUR CLARITY">VOTRE ARGENT, VOTRE VISIBILITÉ</span>
+      <h1 data-fr="Reprenez le contrôle de vos <span class='gradient-text'>abonnements.</span>" data-en="Take control of your <span class='gradient-text'>subscriptions.</span>">Reprenez le contrôle de vos <span class="gradient-text">abonnements.</span></h1>
+      <p data-fr="Lumo rassemble vos abonnements, vous aide à anticiper les renouvellements et vous donne une vue plus claire de vos dépenses récurrentes. Simplement, depuis votre téléphone." data-en="Lumo brings your subscriptions together, helps you plan for renewals and gives you a clearer view of recurring expenses. Simply, from your phone.">Lumo rassemble vos abonnements, vous aide à anticiper les renouvellements et vous donne une vue plus claire de vos dépenses récurrentes. Simplement, depuis votre téléphone.</p>
+      <div class="hero-buttons"><a class="primary-btn" href="#download" data-fr="Télécharger l'APK" data-en="Download the APK">Télécharger l'APK <span>↗</span></a><a class="secondary-btn" href="#features" data-fr="Voir les fonctionnalités" data-en="Explore features">Voir les fonctionnalités <span>↓</span></a></div>
+      <div class="trust-line"><span data-fr="Pas de connexion bancaire" data-en="No bank connection">Pas de connexion bancaire</span><span data-fr="Pensé pour Android" data-en="Made for Android">Pensé pour Android</span><span data-fr="Interface en français" data-en="French interface">Interface en français</span></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 Lumo. Tous droits réservés.</span><span>CONÇU POUR ANDROID <b>✳</b></span></div>
-  </footer>
-
-  <script>
-    (() => {
-      const items = document.querySelectorAll('.reveal');
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduceMotion || !('IntersectionObserver' in window)) {
-        items.forEach(item => item.classList.add('is-visible'));
-        return;
-      }
-      const observer = new IntersectionObserver((entries, currentObserver) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            currentObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.14, rootMargin: '0px 0px -36px 0px' });
-      items.forEach(item => observer.observe(item));
-    })();
-  </script>
+    <div class="hero-visual" aria-label="Aperçu illustratif de l'application Lumo">
+      <div class="glow"></div>
+      <div class="float-card float-one"><b><span class="check">●</span><span data-fr="Rappel programmé" data-en="Reminder scheduled">Rappel programmé</span></b><small data-fr="Gardez un œil sur vos dates" data-en="Keep an eye on your dates">Gardez un œil sur vos dates</small></div>
+      <div class="phone"><div class="phone-screen"><div class="phone-top"><span>9:41</span><span>● ● ▰</span></div><div class="phone-brand">lumo<span class="gradient-text">.</span></div><div class="phone-muted" data-fr="Votre espace de suivi" data-en="Your tracking space">Votre espace de suivi</div><div class="balance-card"><small data-fr="VUE D'ENSEMBLE" data-en="OVERVIEW">VUE D'ENSEMBLE</small><strong>•••• FCFA</strong><span data-fr="Vos montants apparaissent ici" data-en="Your totals appear here">Vos montants apparaissent ici</span></div><div class="phone-section-title"><b data-fr="Mes abonnements" data-en="My subscriptions">Mes abonnements</b><small data-fr="À suivre" data-en="To track">À suivre</small></div><div class="phone-item"><span class="app-dot">S</span><span><b>Streaming</b><small data-fr="Prochaine échéance" data-en="Next renewal">Prochaine échéance</small></span><em>↗</em></div><div class="phone-item"><span class="app-dot">C</span><span><b>Cloud</b><small data-fr="Dépense récurrente" data-en="Recurring expense">Dépense récurrente</small></span><em>↗</em></div><div class="phone-section-title"><b data-fr="Vue des dépenses" data-en="Expense overview">Vue des dépenses</b><small>•••</small></div><div class="phone-chart"><i style="--bar:30%"></i><i style="--bar:58%"></i><i style="--bar:45%"></i><i style="--bar:82%"></i><i style="--bar:65%"></i><i style="--bar:100%"></i><i style="--bar:72%"></i></div></div></div>
+      <div class="float-card float-two"><b><span class="float-icon">↗</span><span data-fr="Vue centralisée" data-en="One clear overview">Vue centralisée</span></b><small data-fr="Vos abonnements, au même endroit" data-en="All subscriptions in one place">Vos abonnements, au même endroit</small></div>
+    </div>
+  </div>
+</section>
+<section class="trust-band"><div class="container trust-grid">
+  <div class="trust-item"><strong data-fr="Base gratuite" data-en="Free core">Base gratuite</strong><span data-fr="Pour commencer avec Lumo" data-en="Get started with Lumo">Pour commencer avec Lumo</span></div>
+  <div class="trust-item"><strong data-fr="Rappels" data-en="Reminders">Rappels</strong><span data-fr="Pour anticiper les échéances" data-en="Plan ahead for renewals">Pour anticiper les échéances</span></div>
+  <div class="trust-item"><strong data-fr="Stockage local" data-en="Local storage">Stockage local</strong><span data-fr="Vos abonnements sont enregistrés sur l'appareil" data-en="Your subscriptions are stored on-device">Vos abonnements sont enregistrés sur l'appareil</span></div>
+  <div class="trust-item"><strong data-fr="FR / EN" data-en="FR / EN">FR / EN</strong><span data-fr="Site bilingue, application selon la version" data-en="Bilingual website; app language depends on version">Site bilingue, application selon la version</span></div>
+</div></section>
+<section class="section" id="features"><div class="container">
+  <div class="section-head reveal"><span class="section-label" data-fr="CE QUE LUMO VOUS APPORTE" data-en="WHAT LUMO BRINGS YOU">CE QUE LUMO VOUS APPORTE</span><h2 data-fr="La clarté, fonctionnalité par fonctionnalité." data-en="Clarity, one feature at a time.">La clarté, fonctionnalité par fonctionnalité.</h2><p data-fr="Les outils essentiels pour organiser vos dépenses récurrentes, sans vous compliquer la vie." data-en="The essential tools to organize recurring expenses, without making life complicated.">Les outils essentiels pour organiser vos dépenses récurrentes, sans vous compliquer la vie.</p></div>
+  <div class="features-grid">
+    <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 15v-3m5 3V8m5 7v-5"/></svg></div><h3 data-fr="Tableau de bord" data-en="Dashboard">Tableau de bord</h3><p data-fr="Retrouvez vos abonnements et une vue d'ensemble de vos dépenses récurrentes." data-en="Find your subscriptions and get an overview of recurring expenses.">Retrouvez vos abonnements et une vue d'ensemble de vos dépenses récurrentes.</p></article>
+    <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></div><h3 data-fr="Rappels de renouvellement" data-en="Renewal reminders">Rappels de renouvellement</h3><p data-fr="Configurez des rappels pour garder vos prochaines échéances à l'esprit." data-en="Set reminders to keep upcoming renewal dates in mind.">Configurez des rappels pour garder vos prochaines échéances à l'esprit.</p></article>
+    <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5m0 14h17M8 15l3-4 3 2 5-7"/></svg></div><h3 data-fr="Statistiques" data-en="Statistics">Statistiques</h3><p data-fr="Visualisez vos dépenses récurrentes et leur répartition à partir des informations saisies." data-en="Visualize recurring expenses and their breakdown based on the information you enter.">Visualisez vos dépenses récurrentes et leur répartition à partir des informations saisies.</p></article>
+    <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></div><h3 data-fr="Export des données" data-en="Data export">Export des données</h3><p data-fr="Gardez une copie de vos informations grâce aux options d'export disponibles dans l'application." data-en="Keep a copy of your information with the export options available in the app.">Gardez une copie de vos informations grâce aux options d'export disponibles dans l'application.</p></article>
+    <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 4v3"/></svg></div><h3 data-fr="Verrouillage PIN" data-en="PIN lock">Verrouillage PIN</h3><p data-fr="Ajoutez une protection par code PIN et utilisez la biométrie Android si elle est disponible et configurée." data-en="Add PIN protection and use Android biometrics if available and configured.">Ajoutez une protection par code PIN et utilisez la biométrie Android si elle est disponible et configurée.</p></article>
+    <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3 data-fr="Données maîtrisées" data-en="Data under your control">Données maîtrisées</h3><p data-fr="Les informations de vos abonnements sont enregistrées localement. Certaines fonctions, comme la connexion Google ou les taux de change, utilisent des services externes." data-en="Your subscription information is stored locally. Some features, such as Google sign-in or exchange rates, use external services.">Les informations de vos abonnements sont enregistrées localement. Certaines fonctions, comme la connexion Google ou les taux de change, utilisent des services externes.</p></article>
+  </div>
+  <p class="mock-note" data-fr="Le conseiller IA et les fonctions de gamification ne sont pas disponibles dans la version actuelle." data-en="The AI advisor and gamification features are not available in the current version.">Le conseiller IA et les fonctions de gamification ne sont pas disponibles dans la version actuelle.</p>
+</div></section>
+<section class="section how" id="how"><div class="container">
+  <div class="section-head reveal"><span class="section-label" data-fr="COMMENT ÇA MARCHE" data-en="HOW IT WORKS">COMMENT ÇA MARCHE</span><h2 data-fr="Trois étapes. Une vision plus claire." data-en="Three steps. A clearer picture.">Trois étapes. Une vision plus claire.</h2><p data-fr="Vous gardez le contrôle des informations que vous ajoutez et des décisions que vous prenez." data-en="You stay in control of the information you add and the decisions you make.">Vous gardez le contrôle des informations que vous ajoutez et des décisions que vous prenez.</p></div>
+  <div class="steps"><article class="step reveal"><span class="step-num">01</span><h3 data-fr="Installez Lumo" data-en="Install Lumo">Installez Lumo</h3><p data-fr="Téléchargez l'application Android depuis une source officielle lorsqu'elle sera publiée." data-en="Download the Android app from an official source when it is released.">Téléchargez l'application Android depuis une source officielle lorsqu'elle sera publiée.</p></article><article class="step reveal"><span class="step-num">02</span><h3 data-fr="Ajoutez vos abonnements" data-en="Add your subscriptions">Ajoutez vos abonnements</h3><p data-fr="Renseignez le nom du service, le montant, la fréquence et la date de renouvellement." data-en="Enter the service name, amount, frequency and renewal date.">Renseignez le nom du service, le montant, la fréquence et la date de renouvellement.</p></article><article class="step reveal"><span class="step-num">03</span><h3 data-fr="Suivez vos échéances" data-en="Track your renewals">Suivez vos échéances</h3><p data-fr="Consultez vos dépenses récurrentes et recevez les rappels que vous avez configurés." data-en="Review recurring expenses and receive the reminders you configured.">Consultez vos dépenses récurrentes et recevez les rappels que vous avez configurés.</p></article></div>
+</div></section>
+<section class="section" id="screens"><div class="container">
+  <div class="section-head reveal"><span class="section-label" data-fr="APERÇU DE L'APPLICATION" data-en="APP PREVIEW">APERÇU DE L'APPLICATION</span><h2 data-fr="Une interface pensée pour aller à l'essentiel." data-en="An interface designed to keep things simple.">Une interface pensée pour aller à l'essentiel.</h2><p data-fr="Ces maquettes sont des illustrations de présentation, pas des captures d'écran réelles de la version distribuée." data-en="These mockups are presentation illustrations, not actual screenshots of the released version.">Ces maquettes sont des illustrations de présentation, pas des captures d'écran réelles de la version distribuée.</p></div>
+  <div class="screens-row">
+    <article class="screen-card reveal"><div class="screen-preview"><div class="screen-top">lumo. <span style="float:right">•••</span></div><div class="screen-widget"><small>VUE D'ENSEMBLE</small><b>•••• FCFA</b><small>Résumé des dépenses</small></div><div class="screen-lines"><i></i><i></i><i></i></div></div><h3 data-fr="Accueil" data-en="Home">Accueil</h3><p data-fr="Vue d'ensemble" data-en="Overview">Vue d'ensemble</p></article>
+    <article class="screen-card reveal"><div class="screen-preview"><div class="screen-top">lumo. / Services</div><div class="screen-lines"><i></i><i></i><i></i><i></i><i></i></div></div><h3 data-fr="Abonnements" data-en="Subscriptions">Abonnements</h3><p data-fr="Vos services suivis" data-en="Your tracked services">Vos services suivis</p></article>
+    <article class="screen-card reveal"><div class="screen-preview"><div class="screen-top">lumo. / Stats</div><div class="screen-widget"><small>RÉPARTITION</small><b>•• %</b></div><div class="screen-bars"><i style="--bar:35%"></i><i style="--bar:80%"></i><i style="--bar:60%"></i><i style="--bar:100%"></i><i style="--bar:48%"></i></div></div><h3 data-fr="Statistiques" data-en="Statistics">Statistiques</h3><p data-fr="Tendances et catégories" data-en="Trends and categories">Tendances et catégories</p></article>
+    <article class="screen-card reveal"><div class="screen-preview"><div class="screen-top">lumo. / Plus</div><div class="screen-widget"><small>FONCTIONS AVANCÉES</small><b data-fr="Bientôt" data-en="Coming soon">Bientôt</b><small data-fr="Présentation indicative" data-en="Indicative preview">Présentation indicative</small></div><div class="screen-lines"><i></i><i></i></div></div><h3 data-fr="Fonctions futures" data-en="Future features">Fonctions futures</h3><p data-fr="Non disponibles actuellement" data-en="Not currently available">Non disponibles actuellement</p></article>
+  </div>
+</div></section>
+<section class="section pricing" id="pricing"><div class="container">
+  <div class="section-head reveal"><span class="section-label" data-fr="TARIFS" data-en="PRICING">TARIFS</span><h2 data-fr="Des offres simples, sans surprise." data-en="Simple plans, no surprises.">Des offres simples, sans surprise.</h2><p data-fr="La version actuelle est proposée gratuitement. Les offres payantes ci-dessous sont des pistes de tarification, pas des abonnements commercialisés." data-en="The current version is offered for free. The paid plans below are pricing proposals, not subscriptions currently on sale.">La version actuelle est proposée gratuitement. Les offres payantes ci-dessous sont des pistes de tarification, pas des abonnements commercialisés.</p></div>
+  <div class="pricing-note" data-fr="Important : aucun paiement Premium, essai gratuit, publicité ou paiement Mobile Money n'est activé dans la version actuelle. Les montants affichés pour Premium et Premium+ sont uniquement des propositions de travail." data-en="Important: Premium payments, free trials, ads and Mobile Money payments are not enabled in the current version. Premium and Premium+ prices shown are working proposals only.">Important : aucun paiement Premium, essai gratuit, publicité ou paiement Mobile Money n'est activé dans la version actuelle. Les montants affichés pour Premium et Premium+ sont uniquement des propositions de travail.</div>
+  <div class="price-controls"><div class="billing-toggle" role="group" aria-label="Période de facturation"><button type="button" id="monthly" aria-pressed="true" data-fr="Mensuel" data-en="Monthly">Mensuel</button><button type="button" id="yearly" aria-pressed="false" data-fr="Annuel" data-en="Yearly">Annuel</button></div><span class="save" data-fr="−20 % : simulation annuelle" data-en="−20%: annual estimate">−20 % : simulation annuelle</span></div>
+  <div class="price-grid">
+    <article class="price-card reveal"><h3>GRATUIT</h3><p data-fr="Pour découvrir et organiser ses abonnements." data-en="To get started and organize subscriptions.">Pour découvrir et organiser ses abonnements.</p><div class="price">0 <small>FCFA</small></div><div class="annual-hint" data-fr="Version de base actuelle" data-en="Current core version">Version de base actuelle</div><ul class="price-list"><li data-fr="Suivi manuel des abonnements" data-en="Manual subscription tracking">Suivi manuel des abonnements</li><li data-fr="Rappels et vue d'ensemble" data-en="Reminders and overview">Rappels et vue d'ensemble</li><li data-fr="Fonctions locales disponibles" data-en="Available local features">Fonctions locales disponibles</li></ul><a class="secondary-btn" href="#download" data-fr="Découvrir Lumo" data-en="Explore Lumo">Découvrir Lumo</a></article>
+    <article class="price-card reveal"><h3>PREMIUM</h3><p data-fr="Proposition d'offre — non activée." data-en="Proposed plan — not enabled.">Proposition d'offre — non activée.</p><div class="price"><span class="dynamic-price" data-month="2 000" data-year="1 600">2 000</span> <small>FCFA/<span class="period-label">mois</span></small></div><div class="annual-hint" data-fr="Tarif envisagé, non disponible à l'achat" data-en="Proposed price, not available to purchase">Tarif envisagé, non disponible à l'achat</div><ul class="price-list"><li data-fr="Fonctions de la version gratuite" data-en="Free plan features">Fonctions de la version gratuite</li><li data-fr="Options avancées envisagées" data-en="Planned advanced options">Options avancées envisagées</li><li data-fr="Sans publicité (si activée)" data-en="Ad-free (if enabled)">Sans publicité (si activée)</li></ul><button class="secondary-btn disabled-btn" type="button" disabled data-fr="Bientôt disponible" data-en="Coming soon">Bientôt disponible</button></article>
+    <article class="price-card popular reveal"><span class="popular-label" data-fr="PROJET" data-en="PROPOSED">PROJET</span><h3>PREMIUM+</h3><p data-fr="Proposition d'offre avancée — non activée." data-en="Proposed advanced plan — not enabled.">Proposition d'offre avancée — non activée.</p><div class="price"><span class="dynamic-price" data-month="5 000" data-year="4 000">5 000</span> <small>FCFA/<span class="period-label">mois</span></small></div><div class="annual-hint" data-fr="Tarif envisagé, non disponible à l'achat" data-en="Proposed price, not available to purchase">Tarif envisagé, non disponible à l'achat</div><ul class="price-list"><li data-fr="Tout Premium" data-en="Everything in Premium">Tout Premium</li><li data-fr="Conseiller IA envisagé" data-en="Planned AI advisor">Conseiller IA envisagé</li><li data-fr="Partage familial envisagé" data-en="Planned family sharing">Partage familial envisagé</li></ul><button class="primary-btn disabled-btn" type="button" disabled data-fr="Offre non activée" data-en="Plan not enabled">Offre non activée</button></article>
+  </div>
+  <p class="money-note" data-fr="Moov Money / Airtel Money : moyen de paiement envisagé pour une future version. Aucun encaissement n'est actuellement proposé sur ce site." data-en="Moov Money / Airtel Money: payment methods being considered for a future version. No payments are currently accepted on this website.">Moov Money / Airtel Money : moyen de paiement envisagé pour une future version. Aucun encaissement n'est actuellement proposé sur ce site.</p>
+</div></section>
+<section class="section" id="faq"><div class="container">
+  <div class="section-head reveal"><span class="section-label">FAQ</span><h2 data-fr="Les réponses, sans détour." data-en="Straightforward answers.">Les réponses, sans détour.</h2><p data-fr="Une question sur l'application ou sa disponibilité ? Voici les informations confirmées à ce jour." data-en="A question about the app or its availability? Here is what is confirmed so far.">Une question sur l'application ou sa disponibilité ? Voici les informations confirmées à ce jour.</p></div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false"><span data-fr="Lumo est-il gratuit ?" data-en="Is Lumo free?">Lumo est-il gratuit ?</span><span>＋</span></button><div class="faq-answer"><div><p data-fr="La version actuelle est proposée gratuitement. Les offres Premium et Premium+ affichées sur cette page sont des propositions et ne peuvent pas encore être achetées." data-en="The current version is offered for free. Premium and Premium+ plans shown here are proposals and cannot yet be purchased.">La version actuelle est proposée gratuitement. Les offres Premium et Premium+ affichées sur cette page sont des propositions et ne peuvent pas encore être achetées.</p></div></div></div>
+    <div class="faq-item"><button class="faq-question" aria-expanded="false"><span data-fr="Comment payer le Premium sans carte bancaire ?" data-en="How can I pay for Premium without a bank card?">Comment payer le Premium sans carte bancaire ?</span><span>＋</span></button><div class="faq-answer"><div><p data-fr="Les paiements ne sont pas activés. Moov Money et Airtel Money sont envisagés, mais aucun paiement ne doit être effectué pour le moment." data-en="Payments are not enabled. Moov Money and Airtel Money are being considered, but no payment should be made at this time.">Les paiements ne sont pas activés. Moov Money et Airtel Money sont envisagés, mais aucun paiement ne doit être effectué pour le moment.</p></div></div></div>
+    <div class="faq-item"><button class="faq-question" aria-expanded="false"><span data-fr="Mes données sont-elles en sécurité ?" data-en="Is my data secure?">Mes données sont-elles en sécurité ?</span><span>＋</span></button><div class="faq-answer"><div><p data-fr="Les informations d'abonnement sont stockées localement sur l'appareil. Certaines fonctions utilisent des services externes, notamment l'authentification Google et les taux de change. La base locale n'est pas présentée comme chiffrée. Consultez la politique de confidentialité pour les détails." data-en="Subscription information is stored locally on the device. Some features use external services, including Google sign-in and exchange rates. The local database is not represented as encrypted. See the privacy policy for details.">Les informations d'abonnement sont stockées localement sur l'appareil. Certaines fonctions utilisent des services externes, notamment l'authentification Google et les taux de change. La base locale n'est pas présentée comme chiffrée. Consultez la politique de confidentialité pour les détails.</p></div></div></div>
+    <div class="faq-item"><button class="faq-question" aria-expanded="false"><span data-fr="Sur quels téléphones ça marche ?" data-en="Which phones are supported?">Sur quels téléphones ça marche ?</span><span>＋</span></button><div class="faq-answer"><div><p data-fr="Lumo est une application Android. La compatibilité exacte dépend de la version Android et de l'appareil ; consultez les informations de la version publiée avant l'installation." data-en="Lumo is an Android app. Exact compatibility depends on Android version and device; check the published release information before installing.">Lumo est une application Android. La compatibilité exacte dépend de la version Android et de l'appareil ; consultez les informations de la version publiée avant l'installation.</p></div></div></div>
+    <div class="faq-item"><button class="faq-question" aria-expanded="false"><span data-fr="Comment mettre à jour l'application ?" data-en="How do I update the app?">Comment mettre à jour l'application ?</span><span>＋</span></button><div class="faq-answer"><div><p data-fr="Lorsqu'une version officielle sera publiée, les instructions et le lien de mise à jour seront ajoutés ici. N'installez pas d'APK provenant de sources non vérifiées." data-en="When an official version is released, update instructions and the update link will be added here. Do not install APKs from unverified sources.">Lorsqu'une version officielle sera publiée, les instructions et le lien de mise à jour seront ajoutés ici. N'installez pas d'APK provenant de sources non vérifiées.</p></div></div></div>
+  </div>
+</div></section>
+<section class="download-section" id="download"><div class="container"><div class="download-panel reveal">
+  <span class="section-label" data-fr="BIENTÔT SUR ANDROID" data-en="COMING SOON TO ANDROID">BIENTÔT SUR ANDROID</span>
+  <h2 data-fr="Prêt à éclairer vos dépenses ?" data-en="Ready to bring clarity to your spending?">Prêt à éclairer vos dépenses ?</h2>
+  <p data-fr="La distribution officielle de Lumo se prépare. Le bouton de téléchargement sera activé dès que l'APK pourra être obtenu depuis une source officielle vérifiée." data-en="Lumo's official release is being prepared. The download button will be enabled once the APK is available from a verified official source.">La distribution officielle de Lumo se prépare. Le bouton de téléchargement sera activé dès que l'APK pourra être obtenu depuis une source officielle vérifiée.</p>
+  <div class="download-actions"><button class="primary-btn disabled-btn" type="button" disabled data-fr="APK bientôt disponible" data-en="APK coming soon">APK bientôt disponible</button><button class="secondary-btn disabled-btn" type="button" disabled data-fr="Uptodown — publication en attente" data-en="Uptodown — pending release">Uptodown — publication en attente</button><button class="secondary-btn disabled-btn" type="button" disabled data-fr="Version iOS : non annoncée" data-en="iOS version: not announced">Version iOS : non annoncée</button></div>
+  <div class="qr-placeholder"><span class="qr-pattern" aria-hidden="true"></span><span data-fr="QR code activé avec le lien officiel" data-en="QR code will be enabled with the official link">QR code activé avec le lien officiel</span></div>
+  <small class="download-note" data-fr="Version gratuite · Android · Lien officiel à venir" data-en="Free version · Android · Official link coming soon">Version gratuite · Android · Lien officiel à venir</small>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container">
+  <div class="footer-top"><div class="footer-brand"><a class="brand" href="#"><span class="brand-icon">✳</span><span>lumo<span class="dot">.</span></span></a><p data-fr="Éclairez vos dépenses." data-en="Bring clarity to your spending.">Éclairez vos dépenses.</p></div>
+    <div class="footer-links"><a href="#features" data-fr="Fonctionnalités" data-en="Features">Fonctionnalités</a><a href="#pricing" data-fr="Tarifs" data-en="Pricing">Tarifs</a><a href="#download" data-fr="Télécharger" data-en="Download">Télécharger</a><a href="privacy.html" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a></div>
+    <div class="socials"><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="WhatsApp">WA</a></div>
+  </div><div class="footer-bottom"><span>© 2026 Lumo. Tous droits réservés.</span><span data-fr="Éclairez vos dépenses." data-en="Bring clarity to your spending.">Éclairez vos dépenses.</span></div>
+</div></footer>
+<div class="mobile-download"><a class="primary-btn" href="#download" data-fr="Télécharger Lumo ↗" data-en="Get Lumo ↗">Télécharger Lumo ↗</a></div>
+<script>
+(() => {
+  const langButton=document.getElementById('langToggle');
+  let lang='fr';
+  langButton.addEventListener('click',()=>{
+    lang=lang==='fr'?'en':'fr';
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-fr][data-en]').forEach(el=>{el.innerHTML=el.dataset[lang]});
+    langButton.textContent=lang==='fr'?'EN':'FR';
+    langButton.setAttribute('aria-label',lang==='fr'?'Switch to English':'Passer en français');
+    document.querySelectorAll('.period-label').forEach(el=>el.textContent=lang==='fr'?(yearly?'an':'mois'):(yearly?'year':'month'));
+  });
+  const burger=document.getElementById('burger'),nav=document.getElementById('navLinks');
+  burger.addEventListener('click',()=>{const open=burger.getAttribute('aria-expanded')!=='true';burger.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu')});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+  document.querySelectorAll('.faq-question').forEach(button=>button.addEventListener('click',()=>{const item=button.closest('.faq-item'),open=item.classList.toggle('open');button.setAttribute('aria-expanded',String(open))}));
+  let yearly=false;
+  const month=document.getElementById('monthly'),year=document.getElementById('yearly');
+  function updatePrices(){document.querySelectorAll('.dynamic-price').forEach(el=>el.textContent=yearly?el.dataset.year:el.dataset.month);document.querySelectorAll('.period-label').forEach(el=>el.textContent=lang==='fr'?(yearly?'an':'mois'):(yearly?'year':'month'));month.setAttribute('aria-pressed',String(!yearly));year.setAttribute('aria-pressed',String(yearly))}
+  month.addEventListener('click',()=>{yearly=false;updatePrices()});year.addEventListener('click',()=>{yearly=true;updatePrices()});
+  const items=document.querySelectorAll('.reveal');
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window)){items.forEach(el=>el.classList.add('visible'))}
+  else{const observer=new IntersectionObserver((entries,obs)=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -30px 0px'});items.forEach(el=>observer.observe(el))}
+})();
+</script>
 </body>
 </html>
