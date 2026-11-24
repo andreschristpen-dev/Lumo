@@ -1,142 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de Confidentialité — Lumo</title>
-  <meta name="description" content="Politique de confidentialité transparente et fidèle au fonctionnement réel de l'application Android Lumo.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0f14">
+  <meta name="description" content="Politique de confidentialité de l'application Android Lumo : données traitées, stockage, services tiers et droits des utilisateurs.">
+  <title>Confidentialité — Lumo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- En-tête -->
-  <header>
-    <div class="container nav-wrapper">
-      <a href="index.html" class="logo-brand">
-        <div class="logo-badge">⚡</div>
-        <span>Lumo</span>
-      </a>
-      <nav class="nav-links">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Lumo, accueil"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Lumo</span></a>
+      <nav class="main-nav" aria-label="Navigation principale">
         <a href="index.html#features">Fonctionnalités</a>
-        <a href="index.html#tech">Architecture</a>
-        <a href="privacy.html" style="color: var(--neon-purple); font-weight: 700;">Confidentialité</a>
+        <a href="index.html#how">Comment ça marche</a>
+        <a href="privacy.html" aria-current="page">Confidentialité</a>
       </nav>
+      <a class="nav-cta" href="index.html">Retour au site <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
-  <!-- Contenu Principal -->
-  <main class="container privacy-content">
-    <h1>Politique de Confidentialité</h1>
-    <span class="date-badge">Dernière mise à jour : 18 octobre 2026 — Version 1.1</span>
-
-    <!-- Note d'identification de l'éditeur -->
-    <div class="notice-box">
-      <strong>ℹ️ Informations sur l'éditeur :</strong> Cette politique décrit les flux de données réels de l'application Android <strong>Lumo</strong> (identifiant de paquet : <code>com.aistudio.lumo.prod</code>). Vous pouvez personnaliser les coordonnées ci-dessous avec vos informations de contact définitives.
+  <main id="contenu" class="privacy-content">
+    <div class="privacy-hero">
+      <span class="eyebrow">Informations et transparence</span>
+      <h1>Politique de confidentialité</h1>
+      <p>Cette page explique quelles informations l’application Lumo traite, comment elles sont utilisées et quels contrôles sont à votre disposition.</p>
+      <div class="privacy-meta">Version de l’application concernée : 1.2.0 · Version de la politique : 1.0 · Mise à jour : 21 novembre 2026</div>
     </div>
 
-    <!-- Section 1 : Responsable du traitement -->
-    <div class="privacy-section">
-      <h2>1. Éditeur de l'application et contact</h2>
-      <p>
-        L'application <strong>Lumo</strong> est un outil de gestion et de suivi des dépenses d'abonnements récurrents distribué sur Android.
-      </p>
-      <div class="contact-highlight">
-        <strong>Contact pour les questions de confidentialité :</strong><br>
-        • Nom / Structure de l'éditeur : <em>[À compléter par l'éditeur — ex: Équipe Lumo]</em><br>
-        • Adresse e-mail de support : <em>[À compléter par l'éditeur — ex: contact@votredomaine.com]</em>
+    <div class="privacy-notice"><strong>À lire avant publication :</strong> cette politique décrit les fonctionnalités et services déclarés pour Lumo 1.2.0. Les coordonnées de contact de l’éditeur doivent être complétées et le texte doit être vérifié contre la version effectivement distribuée avant la mise en ligne définitive.</div>
+
+    <section class="privacy-section">
+      <h2>1. Éditeur et contact</h2>
+      <p>Lumo est une application Android de suivi manuel des abonnements et des dépenses récurrentes. Elle ne se connecte pas aux comptes bancaires et ne réalise pas de prélèvements à la place des fournisseurs de services.</p>
+      <div class="privacy-contact">
+        <p><strong>Éditeur :</strong> informations légales de l’éditeur à compléter.</p>
+        <p><strong>Contact confidentialité et assistance :</strong> adresse e-mail officielle à renseigner avant publication.</p>
       </div>
-    </div>
+    </section>
 
-    <!-- Section 2 : Données réellement collectées et stockage -->
-    <div class="privacy-section">
-      <h2>2. Données traitées et localisation du stockage</h2>
-      <p>Lumo a été conçue selon un principe de minimisation des données. Voici la cartographie exacte des données traitées :</p>
-      
+    <section class="privacy-section">
+      <h2>2. Informations enregistrées dans l’application</h2>
       <ul>
-        <li>
-          <strong>Données relatives aux abonnements (Stockage local sur l'appareil) :</strong><br>
-          Les noms des services, montants, devises, fréquences de paiement, catégories, dates de début et de renouvellement, ainsi que les notes personnelles saisies sont stockés directement sur votre téléphone dans une base de données locale (SQLite via la bibliothèque Android Jetpack Room). Ces fiches d'abonnements ne sont pas synchronisées sur un serveur propriétaire tiers.
-        </li>
-        <li>
-          <strong>Données d'identification et de compte (Firebase Authentication) :</strong><br>
-          Si vous choisissez de vous connecter avec votre compte Google (Google Sign-In) ou par adresse e-mail, votre identifiant utilisateur (UID), adresse e-mail et nom de profil sont traités par le service <strong>Firebase Authentication</strong> (fourni par Google LLC). Si vous utilisez le mode « Invité / Démo », aucune donnée de profil n'est envoyée à Firebase.
-        </li>
-        <li>
-          <strong>Code de verrouillage PIN et Biométrie :</strong><br>
-          Si vous activez la sécurité par code PIN, celui-ci est haché avec un sel cryptographique (SHA-256) et stocké localement dans les préférences protégées de l'appareil. Les données biométriques (empreinte digitale ou reconnaissance faciale) sont gérées exclusivement par le processeur sécurisé d'Android ; Lumo ne reçoit ni n'enregistre jamais vos données biométriques.
-        </li>
+        <li><strong>Abonnements :</strong> les noms des services, montants, devises, fréquences, catégories, dates, rappels et notes que vous saisissez sont enregistrés dans la base de données locale de l’application sur votre appareil (Room / SQLite).</li>
+        <li><strong>Compte :</strong> la connexion Google utilise Credential Manager et Firebase Authentication. Les modes e-mail et invité disponibles dans cette version sont gérés localement selon le fonctionnement de l’application.</li>
+        <li><strong>Verrouillage :</strong> si vous configurez un PIN, son empreinte dérivée est stockée localement avec un sel à l’aide de PBKDF2WithHmacSHA256. La biométrie est traitée par les mécanismes Android ; Lumo ne reçoit pas les données biométriques brutes.</li>
+        <li><strong>Préférences :</strong> les paramètres d’affichage, de langue, de devise et de notifications sont enregistrés pour permettre le fonctionnement de l’application.</li>
       </ul>
-    </div>
+      <p>La base locale SQLite n’est pas décrite comme chiffrée par Lumo. Protégez l’accès à votre appareil et utilisez le verrouillage proposé dans l’application si vous souhaitez ajouter une protection à son ouverture.</p>
+    </section>
 
-    <!-- Section 3 : Services tiers et Intelligence Artificielle -->
-    <div class="privacy-section">
-      <h2>3. Services tiers intégrés et Intelligence Artificielle</h2>
-      <p>Lumo intègre les services tiers suivants, activés selon votre utilisation :</p>
-      
+    <section class="privacy-section">
+      <h2>3. Services externes et connexions réseau</h2>
       <ul>
-        <li>
-          <strong>API Google Gemini (Intelligence Artificielle) :</strong><br>
-          Lorsque vous interagissez avec l'Assistant IA ou que vous utilisez la fonction « Scanner une facture », les données nécessaires au traitement (texte de votre question, synthèse de vos dépenses si demandée, ou image du reçu en base64) sont transmises via une connexion sécurisée (HTTPS) aux serveurs de <strong>Google Generative Language API</strong>. Ce traitement est exécuté uniquement à votre demande expresse et ne fait l'objet d'aucun profilage commercial tiers.
-        </li>
-        <li>
-          <strong>Google Play Billing (Actuellement en pause) :</strong><br>
-          La bibliothèque technique Google Play Billing est présente dans l'application pour de futurs services Pro éventuels, mais les paiements sont actuellement <strong>désactivés</strong>. Aucune transaction financière n'est effectuée et aucune coordonnée bancaire n'est collectée par Lumo.
-        </li>
+        <li><strong>Firebase Authentication :</strong> utilisé pour l’authentification Google. Les données nécessaires à cette authentification sont traitées par Google conformément à ses propres conditions et règles de confidentialité.</li>
+        <li><strong>Taux de change :</strong> l’application peut contacter le service public Frankfurter (api.frankfurter.app) pour récupérer des taux de change. Les résultats sont mis en cache pendant une durée limitée dans l’application. Cette requête implique une connexion au service externe.</li>
+        <li><strong>Vérification de version :</strong> l’application peut consulter le fichier public de version hébergé sur le site Lumo afin de vérifier si une mise à jour est signalée.</li>
       </ul>
-    </div>
+      <p>Dans la version 1.2.0 décrite ici, les fonctions Gemini, l’analyse OCR de reçus, l’authentification par téléphone, la réinitialisation de mot de passe par SMS, les publicités et les paiements intégrés sont désactivés. L’application ne doit pas être présentée comme utilisant ces services tant qu’ils ne sont pas effectivement activés et documentés.</p>
+    </section>
 
-    <!-- Section 4 : Permissions Android -->
-    <div class="privacy-section">
-      <h2>4. Autorisations système requises et justification</h2>
+    <section class="privacy-section">
+      <h2>4. Autorisations Android</h2>
       <ul>
-        <li>
-          <strong>Appareil photo (CAMERA) :</strong><br>
-          Optionnelle. Utilisée exclusivement si vous décidez de photographier un reçu ou une facture papier pour en extraire le montant et le nom du service via l'IA. L'image est traitée en mémoire et n'est pas conservée dans votre galerie par l'application.
-        </li>
-        <li>
-          <strong>Notifications (POST_NOTIFICATIONS) :</strong><br>
-          Requise pour vous avertir des échéances de prélèvement (ex: 3 jours avant) et des fins d'essais gratuits (24h avant). Ces rappels sont générés localement par le système Android (AlarmManager).
-        </li>
-        <li>
-          <strong>Accès Réseau (INTERNET) :</strong><br>
-          Nécessaire pour l'authentification Firebase et les requêtes adressées à l'API Gemini lors des audits financiers.
-        </li>
+        <li><strong>INTERNET :</strong> permet les connexions nécessaires à l’authentification Google, à la récupération des taux de change et à la vérification de version.</li>
+        <li><strong>POST_NOTIFICATIONS :</strong> permet d’afficher les rappels de renouvellement lorsque l’autorisation est accordée.</li>
+        <li><strong>SCHEDULE_EXACT_ALARM :</strong> peut être utilisé pour programmer précisément certaines alarmes de rappel, selon les autorisations et réglages Android applicables.</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED :</strong> permet de reprogrammer les rappels après le redémarrage de l’appareil.</li>
+        <li><strong>USE_BIOMETRIC :</strong> permet d’utiliser l’invite biométrique du système lorsque cette option est activée.</li>
       </ul>
-    </div>
+      <p>La version décrite ne demande pas d’autorisation générale d’accès à la galerie ni d’autorisation caméra pour une fonction OCR désactivée.</p>
+    </section>
 
-    <!-- Section 5 : Droits, Exportation et Suppression -->
-    <div class="privacy-section">
-      <h2>5. Vos droits, exportation et suppression définitive</h2>
-      <p>Vous disposez d'un contrôle direct et immédiat sur vos données :</p>
-      <ul>
-        <li>
-          <strong>Droit à l'exportation et à la portabilité :</strong> Vous pouvez à tout moment exporter l'ensemble de vos abonnements enregistrés sous forme de fichiers ouverts <strong>JSON</strong> ou <strong>CSV</strong> depuis le menu des Paramètres.
-        </li>
-        <li>
-          <strong>Droit à l'effacement définitif :</strong> Vous pouvez supprimer l'intégralité de vos abonnements en un clic, ou supprimer définitivement votre profil, identifiants et base de données via l'action <em>« Supprimer mon compte et mes données »</em> dans l'écran Paramètres. Cette action purge irrémédiablement vos enregistrements locaux.
-        </li>
-      </ul>
-    </div>
+    <section class="privacy-section">
+      <h2>5. Partage, exportation et conservation</h2>
+      <p>Les données d’abonnement sont conçues pour rester dans le stockage local de l’application. Elles peuvent être exportées manuellement par l’utilisateur dans les formats proposés par la version installée, notamment PDF, CSV et JSON. Un fichier exporté devient indépendant de l’application : vous êtes responsable de l’endroit où vous le conservez et des personnes avec lesquelles vous le partagez.</p>
+      <p>La désinstallation de l’application ou la suppression des données de l’application peut supprimer les données locales. Les conséquences d’une suppression de compte Google sur les données traitées par Firebase sont soumises aux mécanismes de ce service. Une suppression peut nécessiter une connexion réseau pour terminer les opérations liées au compte.</p>
+    </section>
 
-    <!-- Section 6 : Évolutions -->
-    <div class="privacy-section">
-      <h2>6. Modifications de la politique de confidentialité</h2>
-      <p>
-        Toute modification relative aux flux de données ou à l'intégration de nouvelles fonctionnalités sera reflétée sur cette page avec la mise à jour de la date de version.
-      </p>
-    </div>
+    <section class="privacy-section">
+      <h2>6. Sauvegardes et sécurité</h2>
+      <p>La configuration de la version 1.2.0 désactive la sauvegarde automatique Android de l’application. Cela réduit le risque de transfert automatique des données locales par les mécanismes de sauvegarde Android, mais ne constitue pas une garantie absolue de sécurité.</p>
+      <p>Nous recommandons de protéger votre téléphone par un verrouillage système, de garder Android à jour et de ne partager vos exports qu’avec des personnes de confiance.</p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>7. Enfants et données personnelles</h2>
+      <p>Lumo est un outil de suivi personnel. N’y saisissez pas d’informations sensibles qui ne sont pas nécessaires à votre suivi. Si vous pensez que des données ont été traitées de manière inappropriée, contactez l’éditeur à l’adresse qui sera publiée dans la section Contact.</p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>8. Évolutions de cette politique</h2>
+      <p>Cette politique sera mise à jour si les fonctionnalités, les services tiers, les flux de données ou les pratiques de Lumo évoluent. La date et la version affichées en haut de page seront actualisées à chaque modification importante.</p>
+    </section>
+
+    <section class="privacy-section" id="contact">
+      <h2>9. Contact</h2>
+      <p>Pour toute question relative à la confidentialité, à l’accès ou à la suppression des données, utilisez les coordonnées officielles de l’éditeur qui seront publiées ici avant la distribution de l’application.</p>
+    </section>
+
+    <a class="back-link" href="index.html">← Retour à l’accueil Lumo</a>
   </main>
 
-  <!-- Pied de page -->
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Accueil</a>
-        <a href="privacy.html">Politique de Confidentialité</a>
-      </div>
-      <p>© 2026 Lumo — Tous droits réservés.</p>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Lumo</span></a><p>Une vision plus claire de vos abonnements récurrents.</p></div>
+      <div class="footer-nav"><strong>Explorer</strong><a href="index.html#fonctionnalites">Fonctionnalités</a><a href="index.html#comment-ca-marche">Comment ça marche</a></div>
+      <div class="footer-nav"><strong>Informations</strong><a href="privacy.html">Confidentialité</a><a href="index.html">Accueil</a></div>
     </div>
+    <div class="container footer-bottom"><span>© 2026 Lumo. Tous droits réservés.</span><span>Transparence et maîtrise de vos données.</span></div>
   </footer>
-
 </body>
 </html>
